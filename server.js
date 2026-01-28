@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
 
 // mount API routes
 app.use('/api/projects', require('./routes/api/projectRoutes'));
+app.use('/api', require('./routes/api/taskRoutes'));
 
 // INDEX
 app.get('/tasks', async (req, res) => {
