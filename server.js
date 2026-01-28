@@ -24,6 +24,9 @@ app.get('/', (req, res) => {
   res.json({ message: 'TaskMaster API (Tasks) — INDUCES flow' });
 });
 
+// mount API routes
+app.use('/api/projects', require('./routes/api/projectRoutes'));
+
 // INDEX
 app.get('/tasks', async (req, res) => {
   require('dotenv').config();
